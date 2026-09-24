@@ -1,5 +1,9 @@
 // Poker chip shooter
 // Middle school physics, elastic potential energy lab
+// OpenScad script--Free download for Windows/Mac/Linux
+//   .. Programatically design objects.
+//   .. GUI 3d sketch products are soo 1990.
+//   .. Only thing cooler is manifoldcad.org and the manifold project.
 
 tiny=.01;
 gap=.5; 
