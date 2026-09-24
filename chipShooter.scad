@@ -129,6 +129,8 @@ module Print(){
   Hammer();
 }
 
+// Uncomment ONE line:
+
 //Print();
 Assembled();
 //Hammer();
