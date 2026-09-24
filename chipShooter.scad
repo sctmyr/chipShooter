@@ -35,6 +35,7 @@ module Clips(){
   Clip(1);
 }
 
+// The sliding "shooter" shape
 module Bore(cut=0){
   translate([-tiny*cut,(1-cut)*gap,-tiny*cut])
   hull(){
@@ -45,6 +46,7 @@ module Bore(cut=0){
   }
 }
 
+// The outer shell
 module Barrel(){
   z=barrel.z+thick;
   c=projectile.x/2+thick*2;
@@ -66,6 +68,7 @@ module Barrel(){
   Clips();
 }
 
+// Inner sliding hammer/shooter
 module Hammer(){
   back=10;
   module CutCyl(){
@@ -106,11 +109,13 @@ module Hammer(){
   }  
 }
 
+// The chip/projectile
 module Projectile(){
   translate([barrel.x-projectile.x/2+5,barrel.y/2,ledge])
   cylinder(d=projectile.x,h=projectile.z);
 }
 
+// The assembled version of all the parts put together after printing
 module Assembled(){
   //rotate([0,180,0])
   rotate([0,0,180])
@@ -122,6 +127,7 @@ module Assembled(){
   Projectile();
 }
 
+// The printable parts laid flat together
 module Print(){
   rotate([180,0,0])
   translate([0,thick*1.5,-barrel.z])
